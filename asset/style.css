@@ -1,0 +1,212 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+/* Background */
+body{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    background-size:400% 400%;
+    animation:bgAnim 12s ease infinite;
+    color:#fff;
+}
+
+/* Header */
+header{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    background-size:400% 400%;
+    animation:bgAnim 12s ease infinite;
+}
+
+.hero{
+    animation:muncul 1.5s;
+}
+
+/* Foto */
+.profile{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    box-shadow:0 0 30px rgba(255,255,255,.6);
+    animation:melayang 4s ease-in-out infinite;
+}
+
+h1{
+    font-size:50px;
+    margin:20px 0;
+}
+
+header p{
+    font-size:20px;
+}
+
+/* Tombol */
+button{
+    margin-top:25px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    color:white;
+    font-size:17px;
+
+    background:linear-gradient(90deg,#2563eb,#3b82f6,#60a5fa);
+    background-size:300% 300%;
+    animation:bgAnim 6s linear infinite;
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+/* Container */
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:50px auto;
+}
+
+/* Card */
+.card{
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(12px);
+
+    padding:30px;
+    margin-bottom:30px;
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+    opacity:0;
+    transform:translateY(60px);
+    transition:1s;
+}
+
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(37,99,235,.5);
+}
+
+h2{
+    color:#93c5fd;
+    margin-bottom:20px;
+}
+
+/* Item */
+.item{
+    background:rgba(255,255,255,.08);
+    padding:20px;
+    margin:15px 0;
+    border-left:5px solid #60a5fa;
+    border-radius:15px;
+}
+
+/* Skill */
+.bar{
+    height:10px;
+    background:#334155;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:20px;
+}
+
+.bar span{
+    display:block;
+    height:100%;
+
+    background:linear-gradient(90deg,#2563eb,#60a5fa,#93c5fd);
+    background-size:300% 300%;
+    animation:bgAnim 5s linear infinite;
+}
+
+/* Footer */
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Animasi Gradient */
+@keyframes bgAnim{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* Animasi Foto */
+@keyframes melayang{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* Hero */
+@keyframes muncul{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* Responsive */
+@media(max-width:700px){
+
+    h1{
+        font-size:35px;
+    }
+
+    .profile{
+        width:140px;
+        height:140px;
+    }
+
+}
